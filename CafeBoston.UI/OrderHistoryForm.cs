@@ -10,14 +10,14 @@ using System.Windows.Forms;
 
 namespace CafeBoston.UI
 {
-    public partial class MainForm : Form
+    public partial class OrderHistoryForm : Form
     {
-        public MainForm()
+        public OrderHistoryForm()
         {
             InitializeComponent();
         }
 
-        private void ürünlerToolStripMenuItem_Click(object sender, EventArgs e)
+        private void splitContainer1_Panel2_Paint(object sender, PaintEventArgs e)
         {
 
         }
