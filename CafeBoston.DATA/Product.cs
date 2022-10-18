@@ -10,9 +10,9 @@ namespace CafeBoston.DATA
     {
         public string ProductName { get; set; }
         public decimal UnitPrice { get; set; }
-        //public string ToString()
-        //{
-
-        //}
+        public override string ToString()
+        {
+            return $"{ProductName} ({UnitPrice})";
+        }
     }
 }
