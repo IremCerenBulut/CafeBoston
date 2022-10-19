@@ -8,13 +8,17 @@ namespace CafeBoston.DATA
 {
     public class Order
     {
+        public Order()
+        {
+
+        }
         public int TableNo { get; set; }
 
         public DateTime? StartTime { get; set; } = DateTime.Now;
 
         public DateTime? EndTime { get; set; }
 
-        public List<OrderDetail> OrderDetails { get; set; }
+        public List<OrderDetail> OrderDetails { get; set; }=new List<OrderDetail>();
 
         public string TotalPriceTry => TotalPrice().ToString("c2");
 

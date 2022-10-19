@@ -43,9 +43,28 @@ namespace CafeBoston.UI
         {
             var selectedLvi = lvwTables.SelectedItems[0];
             int tableNo = (int)selectedLvi.Tag;
-            MessageBox.Show(tableNo.ToString());
-            //var frmOrder = new OrderForm();
-            //frmOrder.ShowDialog();
+
+            var order = db.ActiveOrders.FirstOrDefault(x => x.TableNo == tableNo);
+
+            if (order==null)
+            {
+                order=new Order() { TableNo = tableNo };
+                db.ActiveOrders.Add(order);
+                selectedLvi.ImageKey="full";
+            }
+
+            var frmOrder = new OrderForm(db,order);
+            var dr=frmOrder.ShowDialog();
+
+            if (dr==DialogResult.OK)
+            {
+                selectedLvi.ImageKey = "empty";
+            }
+        }
+
+        private void tsmiOrderHistory_Click(object sender, EventArgs e)
+        {
+            new OrderHistoryForm(db).ShowDialog();
         }
     }
 }
