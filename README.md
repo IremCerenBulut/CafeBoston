@@ -1,4 +1,4 @@
-Create a class libraryproject named CafeBoston.DATA and create 5 classes and one 1 enum as described below.
+Create a class library project named CafeBoston.DATA and create 4 classes and 1 enum as described below.
 
 Product
 * ProductName: string
@@ -10,7 +10,7 @@ OrderDetail
 * UnitPrice: decimal
 * Quantity: int
 * TotalPriceTRY: string-readonly
-- TotalPrice: decimal
+- TotalPrice(): decimal
 
 OrderState (Active = 0, Paid = 1, Canceled = 2)
 
@@ -28,6 +28,4 @@ CafeData
 * TableCount: int
 * Products: List<Product>
 * ActiveOrders: List<Order>
-* PastOrder: List<Order>
-
-
+* PastOrders: List<Order>
