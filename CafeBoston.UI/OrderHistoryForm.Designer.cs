@@ -45,7 +45,6 @@
             // 
             this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitContainer1.Location = new System.Drawing.Point(0, 0);
-            this.splitContainer1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.splitContainer1.Name = "splitContainer1";
             this.splitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal;
             // 
@@ -58,9 +57,8 @@
             // 
             this.splitContainer1.Panel2.Controls.Add(this.dgvOrderDetails);
             this.splitContainer1.Panel2.Controls.Add(this.label2);
-            this.splitContainer1.Size = new System.Drawing.Size(710, 584);
-            this.splitContainer1.SplitterDistance = 296;
-            this.splitContainer1.SplitterWidth = 5;
+            this.splitContainer1.Size = new System.Drawing.Size(621, 438);
+            this.splitContainer1.SplitterDistance = 222;
             this.splitContainer1.TabIndex = 0;
             // 
             // dgvOrders
@@ -70,28 +68,26 @@
             this.dgvOrders.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgvOrders.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvOrders.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dgvOrders.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvOrders.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvOrders.Location = new System.Drawing.Point(14, 36);
-            this.dgvOrders.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dgvOrders.Location = new System.Drawing.Point(12, 27);
             this.dgvOrders.MultiSelect = false;
             this.dgvOrders.Name = "dgvOrders";
             this.dgvOrders.ReadOnly = true;
             this.dgvOrders.RowHeadersVisible = false;
-            this.dgvOrders.RowHeadersWidth = 51;
             this.dgvOrders.RowTemplate.Height = 25;
             this.dgvOrders.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvOrders.Size = new System.Drawing.Size(682, 243);
+            this.dgvOrders.Size = new System.Drawing.Size(597, 182);
             this.dgvOrders.TabIndex = 1;
             this.dgvOrders.SelectionChanged += new System.EventHandler(this.dgvOrders_SelectionChanged);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(14, 12);
+            this.label1.Location = new System.Drawing.Point(12, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(53, 20);
+            this.label1.Size = new System.Drawing.Size(42, 15);
             this.label1.TabIndex = 0;
             this.label1.Text = "Orders";
             // 
@@ -102,37 +98,34 @@
             this.dgvOrderDetails.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgvOrderDetails.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvOrderDetails.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dgvOrderDetails.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvOrderDetails.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvOrderDetails.Location = new System.Drawing.Point(14, 24);
-            this.dgvOrderDetails.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dgvOrderDetails.Location = new System.Drawing.Point(12, 18);
             this.dgvOrderDetails.MultiSelect = false;
             this.dgvOrderDetails.Name = "dgvOrderDetails";
             this.dgvOrderDetails.ReadOnly = true;
             this.dgvOrderDetails.RowHeadersVisible = false;
-            this.dgvOrderDetails.RowHeadersWidth = 51;
             this.dgvOrderDetails.RowTemplate.Height = 25;
             this.dgvOrderDetails.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvOrderDetails.Size = new System.Drawing.Size(682, 243);
+            this.dgvOrderDetails.Size = new System.Drawing.Size(597, 182);
             this.dgvOrderDetails.TabIndex = 3;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(14, 0);
+            this.label2.Location = new System.Drawing.Point(12, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(97, 20);
+            this.label2.Size = new System.Drawing.Size(75, 15);
             this.label2.TabIndex = 2;
             this.label2.Text = "Order Details";
             // 
             // OrderHistoryForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(710, 584);
+            this.ClientSize = new System.Drawing.Size(621, 438);
             this.Controls.Add(this.splitContainer1);
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "OrderHistoryForm";
             this.Text = "Order History";
             this.splitContainer1.Panel1.ResumeLayout(false);

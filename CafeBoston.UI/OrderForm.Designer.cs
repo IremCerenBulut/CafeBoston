@@ -98,7 +98,7 @@
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label5.Location = new System.Drawing.Point(794, 372);
+            this.label5.Location = new System.Drawing.Point(794, 397);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(110, 28);
             this.label5.TabIndex = 4;
@@ -109,7 +109,7 @@
             this.lblTotalPrice.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lblTotalPrice.AutoSize = true;
             this.lblTotalPrice.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblTotalPrice.Location = new System.Drawing.Point(901, 372);
+            this.lblTotalPrice.Location = new System.Drawing.Point(901, 397);
             this.lblTotalPrice.Name = "lblTotalPrice";
             this.lblTotalPrice.Size = new System.Drawing.Size(60, 28);
             this.lblTotalPrice.TabIndex = 5;
@@ -175,6 +175,7 @@
             this.btnMove.TabIndex = 10;
             this.btnMove.Text = "Move";
             this.btnMove.UseVisualStyleBackColor = true;
+            this.btnMove.Click += new System.EventHandler(this.btnMove_Click);
             // 
             // btnCancel
             // 
@@ -182,7 +183,7 @@
             this.btnCancel.BackColor = System.Drawing.Color.Maroon;
             this.btnCancel.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnCancel.ForeColor = System.Drawing.Color.White;
-            this.btnCancel.Location = new System.Drawing.Point(731, 439);
+            this.btnCancel.Location = new System.Drawing.Point(731, 489);
             this.btnCancel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(137, 45);
@@ -197,7 +198,7 @@
             this.btnPay.BackColor = System.Drawing.Color.YellowGreen;
             this.btnPay.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnPay.ForeColor = System.Drawing.Color.Ivory;
-            this.btnPay.Location = new System.Drawing.Point(882, 439);
+            this.btnPay.Location = new System.Drawing.Point(882, 489);
             this.btnPay.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnPay.Name = "btnPay";
             this.btnPay.Size = new System.Drawing.Size(137, 45);
@@ -212,7 +213,7 @@
             this.btnBack.BackColor = System.Drawing.Color.Khaki;
             this.btnBack.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnBack.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnBack.Location = new System.Drawing.Point(731, 493);
+            this.btnBack.Location = new System.Drawing.Point(731, 543);
             this.btnBack.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(288, 45);
@@ -224,7 +225,6 @@
             // dgvOrderDetails
             // 
             this.dgvOrderDetails.AllowUserToAddRows = false;
-            this.dgvOrderDetails.AllowUserToDeleteRows = false;
             this.dgvOrderDetails.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -244,7 +244,7 @@
             this.dgvOrderDetails.RowHeadersWidth = 51;
             this.dgvOrderDetails.RowTemplate.Height = 25;
             this.dgvOrderDetails.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvOrderDetails.Size = new System.Drawing.Size(688, 463);
+            this.dgvOrderDetails.Size = new System.Drawing.Size(688, 513);
             this.dgvOrderDetails.TabIndex = 14;
             // 
             // Column1
@@ -285,7 +285,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1037, 554);
+            this.ClientSize = new System.Drawing.Size(1037, 604);
             this.Controls.Add(this.dgvOrderDetails);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.btnPay);
