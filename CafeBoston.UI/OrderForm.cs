@@ -11,10 +11,12 @@ using CafeBoston.DATA;
 
 namespace CafeBoston.UI
 {
-    public delegate void TableMoveHandler(int oldTableNo,int newTableNo);
+    public delegate void TableMoveHandler(int oldTableNo, int newTableNo);
+
     public partial class OrderForm : Form
     {
         public event TableMoveHandler TableMoving;
+
         private readonly CafeData _db;
         private readonly Order _order;
         private readonly BindingList<OrderDetail> _orderDetails;
@@ -46,19 +48,18 @@ namespace CafeBoston.UI
 
         private void LoadEmptyTableNos()
         {
-            cboTableNo.DataSource=Enumerable
-                .Range(1,_db.TableCount)
-                .Where(x=> !_db.ActiveOrders.Any(o => o.TableNo == x))
+            cboTableNo.DataSource = Enumerable
+                .Range(1, _db.TableCount)
+                .Where(x => !_db.ActiveOrders.Any(o => o.TableNo == x))
                 .ToList();
 
             //cboTableNo.Items.Clear();
             //for (int i = 1; i <= _db.TableCount; i++)
             //{
-            //    if (!_db.ActiveOrders.Any(x=>x.TableNo==i))
+            //    if (!_db.ActiveOrders.Any(x => x.TableNo == i))
             //    {
             //        cboTableNo.Items.Add(i);
             //    }
-            //    cboTableNo.Items.Add(i);
             //}
         }
 
@@ -127,12 +128,12 @@ namespace CafeBoston.UI
             if (cboTableNo.SelectedIndex == -1) return;
 
             int target = (int)cboTableNo.SelectedItem;
-            int oldtable=_order.TableNo;
+            int oldTableNo = _order.TableNo;
+
             _order.TableNo = target;
-            if (TableMoving!=null)
-            {
-                TableMoving(oldtable, target);
-            }
+
+            if (TableMoving != null)
+                TableMoving(oldTableNo, target);
 
             UpdateTableInfo();
         }

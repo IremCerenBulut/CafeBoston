@@ -1,5 +1,4 @@
-﻿using CafeBoston.DATA;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CafeBoston.DATA;
 
 namespace CafeBoston.UI
 {
@@ -16,6 +16,7 @@ namespace CafeBoston.UI
         private CafeData _db;
         BindingList<Product> _products;
         Product _edited;
+
         public ProductForm(CafeData db)
         {
             _db = db;
@@ -26,13 +27,15 @@ namespace CafeBoston.UI
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            string productName=txtProductName.Text.Trim();
+            string productName = txtProductName.Text.Trim();
+
             if (productName == "")
             {
                 MessageBox.Show("You must enter a product name!");
                 return;
             }
-            if (_edited==null)
+
+            if (_edited == null)
             {
                 _products.Add(new Product()
                 {
@@ -48,10 +51,12 @@ namespace CafeBoston.UI
             }
             SwitchToAddMode();
         }
+
         private void dgvProducts_UserDeletingRow(object sender, DataGridViewRowCancelEventArgs e)
         {
-            var dr=MessageBox.Show("Are you sure that you want to delete the product?","Confirmation",MessageBoxButtons.YesNo,MessageBoxIcon.Warning,MessageBoxDefaultButton.Button2);
-            e.Cancel=dr==DialogResult.No;
+            var dr = MessageBox.Show("Are you sure that you want to delete the product?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2);
+
+            e.Cancel = dr == DialogResult.No;
         }
 
         private void btnEdit_Click(object sender, EventArgs e)
@@ -63,14 +68,15 @@ namespace CafeBoston.UI
 
         private void SwitchToEditMode()
         {
-            dgvProducts.Enabled= false;
+            dgvProducts.Enabled = false;
             btnCancel.Show();
             btnAdd.Text = "SAVE";
             _edited = (Product)dgvProducts.SelectedRows[0].DataBoundItem;
-            txtProductName.Text=_edited.ProductName;
+            txtProductName.Text = _edited.ProductName;
             nudUnitPrice.Value = _edited.UnitPrice;
             btnEdit.Enabled = false;
         }
+
         private void SwitchToAddMode()
         {
             dgvProducts.Enabled = true;

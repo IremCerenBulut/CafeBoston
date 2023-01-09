@@ -55,18 +55,18 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(14, 12);
+            this.label1.Location = new System.Drawing.Point(12, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(60, 20);
+            this.label1.Size = new System.Drawing.Size(49, 15);
             this.label1.TabIndex = 0;
             this.label1.Text = "Product";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(200, 12);
+            this.label2.Location = new System.Drawing.Point(175, 9);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(65, 20);
+            this.label2.Size = new System.Drawing.Size(53, 15);
             this.label2.TabIndex = 1;
             this.label2.Text = "Quantity";
             // 
@@ -74,9 +74,9 @@
             // 
             this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(791, 41);
+            this.label3.Location = new System.Drawing.Point(692, 31);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(68, 20);
+            this.label3.Size = new System.Drawing.Size(53, 15);
             this.label3.TabIndex = 2;
             this.label3.Text = "Table No";
             // 
@@ -86,9 +86,9 @@
             this.lblTableNo.BackColor = System.Drawing.Color.OrangeRed;
             this.lblTableNo.Font = new System.Drawing.Font("Segoe UI", 72F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblTableNo.ForeColor = System.Drawing.Color.White;
-            this.lblTableNo.Location = new System.Drawing.Point(731, 75);
+            this.lblTableNo.Location = new System.Drawing.Point(640, 56);
             this.lblTableNo.Name = "lblTableNo";
-            this.lblTableNo.Size = new System.Drawing.Size(288, 267);
+            this.lblTableNo.Size = new System.Drawing.Size(252, 200);
             this.lblTableNo.TabIndex = 3;
             this.lblTableNo.Text = "00";
             this.lblTableNo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -98,9 +98,9 @@
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label5.Location = new System.Drawing.Point(794, 397);
+            this.label5.Location = new System.Drawing.Point(695, 298);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(110, 28);
+            this.label5.Size = new System.Drawing.Size(87, 21);
             this.label5.TabIndex = 4;
             this.label5.Text = "Total Price: ";
             // 
@@ -109,9 +109,9 @@
             this.lblTotalPrice.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lblTotalPrice.AutoSize = true;
             this.lblTotalPrice.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblTotalPrice.Location = new System.Drawing.Point(901, 397);
+            this.lblTotalPrice.Location = new System.Drawing.Point(788, 298);
             this.lblTotalPrice.Name = "lblTotalPrice";
-            this.lblTotalPrice.Size = new System.Drawing.Size(60, 28);
+            this.lblTotalPrice.Size = new System.Drawing.Size(49, 21);
             this.lblTotalPrice.TabIndex = 5;
             this.lblTotalPrice.Text = "₺0,00";
             // 
@@ -119,23 +119,21 @@
             // 
             this.cboProduct.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboProduct.FormattingEnabled = true;
-            this.cboProduct.Location = new System.Drawing.Point(14, 36);
-            this.cboProduct.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.cboProduct.Location = new System.Drawing.Point(12, 27);
             this.cboProduct.Name = "cboProduct";
-            this.cboProduct.Size = new System.Drawing.Size(179, 28);
+            this.cboProduct.Size = new System.Drawing.Size(157, 23);
             this.cboProduct.TabIndex = 6;
             // 
             // nudQuantity
             // 
-            this.nudQuantity.Location = new System.Drawing.Point(200, 36);
-            this.nudQuantity.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.nudQuantity.Location = new System.Drawing.Point(175, 27);
             this.nudQuantity.Minimum = new decimal(new int[] {
             1,
             0,
             0,
             0});
             this.nudQuantity.Name = "nudQuantity";
-            this.nudQuantity.Size = new System.Drawing.Size(101, 27);
+            this.nudQuantity.Size = new System.Drawing.Size(88, 23);
             this.nudQuantity.TabIndex = 7;
             this.nudQuantity.Value = new decimal(new int[] {
             1,
@@ -145,10 +143,9 @@
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(309, 36);
-            this.btnAdd.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnAdd.Location = new System.Drawing.Point(270, 27);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(86, 31);
+            this.btnAdd.Size = new System.Drawing.Size(75, 23);
             this.btnAdd.TabIndex = 8;
             this.btnAdd.Text = "ADD";
             this.btnAdd.UseVisualStyleBackColor = true;
@@ -159,19 +156,17 @@
             this.cboTableNo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.cboTableNo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboTableNo.FormattingEnabled = true;
-            this.cboTableNo.Location = new System.Drawing.Point(858, 35);
-            this.cboTableNo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.cboTableNo.Location = new System.Drawing.Point(751, 26);
             this.cboTableNo.Name = "cboTableNo";
-            this.cboTableNo.Size = new System.Drawing.Size(68, 28);
+            this.cboTableNo.Size = new System.Drawing.Size(60, 23);
             this.cboTableNo.TabIndex = 9;
             // 
             // btnMove
             // 
             this.btnMove.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnMove.Location = new System.Drawing.Point(934, 36);
-            this.btnMove.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnMove.Location = new System.Drawing.Point(817, 27);
             this.btnMove.Name = "btnMove";
-            this.btnMove.Size = new System.Drawing.Size(86, 31);
+            this.btnMove.Size = new System.Drawing.Size(75, 23);
             this.btnMove.TabIndex = 10;
             this.btnMove.Text = "Move";
             this.btnMove.UseVisualStyleBackColor = true;
@@ -183,10 +178,9 @@
             this.btnCancel.BackColor = System.Drawing.Color.Maroon;
             this.btnCancel.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnCancel.ForeColor = System.Drawing.Color.White;
-            this.btnCancel.Location = new System.Drawing.Point(731, 489);
-            this.btnCancel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnCancel.Location = new System.Drawing.Point(640, 367);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(137, 45);
+            this.btnCancel.Size = new System.Drawing.Size(120, 34);
             this.btnCancel.TabIndex = 11;
             this.btnCancel.Text = "CANCEL";
             this.btnCancel.UseVisualStyleBackColor = false;
@@ -198,10 +192,9 @@
             this.btnPay.BackColor = System.Drawing.Color.YellowGreen;
             this.btnPay.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnPay.ForeColor = System.Drawing.Color.Ivory;
-            this.btnPay.Location = new System.Drawing.Point(882, 489);
-            this.btnPay.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnPay.Location = new System.Drawing.Point(772, 367);
             this.btnPay.Name = "btnPay";
-            this.btnPay.Size = new System.Drawing.Size(137, 45);
+            this.btnPay.Size = new System.Drawing.Size(120, 34);
             this.btnPay.TabIndex = 12;
             this.btnPay.Text = "PAY";
             this.btnPay.UseVisualStyleBackColor = false;
@@ -213,10 +206,9 @@
             this.btnBack.BackColor = System.Drawing.Color.Khaki;
             this.btnBack.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnBack.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnBack.Location = new System.Drawing.Point(731, 543);
-            this.btnBack.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnBack.Location = new System.Drawing.Point(640, 407);
             this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(288, 45);
+            this.btnBack.Size = new System.Drawing.Size(252, 34);
             this.btnBack.TabIndex = 13;
             this.btnBack.Text = "BACK TO MAIN MENU";
             this.btnBack.UseVisualStyleBackColor = false;
@@ -236,22 +228,19 @@
             this.Column2,
             this.Column3,
             this.Column4});
-            this.dgvOrderDetails.Location = new System.Drawing.Point(14, 75);
-            this.dgvOrderDetails.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dgvOrderDetails.Location = new System.Drawing.Point(12, 56);
             this.dgvOrderDetails.Name = "dgvOrderDetails";
             this.dgvOrderDetails.ReadOnly = true;
             this.dgvOrderDetails.RowHeadersVisible = false;
-            this.dgvOrderDetails.RowHeadersWidth = 51;
             this.dgvOrderDetails.RowTemplate.Height = 25;
             this.dgvOrderDetails.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvOrderDetails.Size = new System.Drawing.Size(688, 513);
+            this.dgvOrderDetails.Size = new System.Drawing.Size(602, 385);
             this.dgvOrderDetails.TabIndex = 14;
             // 
             // Column1
             // 
             this.Column1.DataPropertyName = "ProductName";
             this.Column1.HeaderText = "Product Name";
-            this.Column1.MinimumWidth = 6;
             this.Column1.Name = "Column1";
             this.Column1.ReadOnly = true;
             // 
@@ -261,7 +250,6 @@
             dataGridViewCellStyle1.Format = "c2";
             this.Column2.DefaultCellStyle = dataGridViewCellStyle1;
             this.Column2.HeaderText = "Unit Price";
-            this.Column2.MinimumWidth = 6;
             this.Column2.Name = "Column2";
             this.Column2.ReadOnly = true;
             // 
@@ -269,7 +257,6 @@
             // 
             this.Column3.DataPropertyName = "Quantity";
             this.Column3.HeaderText = "Quantity";
-            this.Column3.MinimumWidth = 6;
             this.Column3.Name = "Column3";
             this.Column3.ReadOnly = true;
             // 
@@ -277,15 +264,14 @@
             // 
             this.Column4.DataPropertyName = "TotalPriceTry";
             this.Column4.HeaderText = "Total Price";
-            this.Column4.MinimumWidth = 6;
             this.Column4.Name = "Column4";
             this.Column4.ReadOnly = true;
             // 
             // OrderForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1037, 604);
+            this.ClientSize = new System.Drawing.Size(907, 453);
             this.Controls.Add(this.dgvOrderDetails);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.btnPay);
@@ -301,8 +287,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.MinimumSize = new System.Drawing.Size(745, 542);
+            this.MinimumSize = new System.Drawing.Size(654, 418);
             this.Name = "OrderForm";
             this.Text = "Order (Table 0)";
             ((System.ComponentModel.ISupportInitialize)(this.nudQuantity)).EndInit();

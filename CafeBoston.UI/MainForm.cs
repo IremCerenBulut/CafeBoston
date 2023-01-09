@@ -16,30 +16,27 @@ namespace CafeBoston.UI
     {
         CafeData db = new CafeData();
 
-        public TableMoveHandler FrmOrder_TableMoving { get; private set; }
-
         public MainForm()
         {
             InitializeComponent();
-            LoadSaveData();
+            LoadSavedData();
             SeedSampleProducts();
             LoadTables();
         }
 
-        private void LoadSaveData()
+        private void LoadSavedData()
         {
             try
             {
                 string json = File.ReadAllText("data.json");
                 db = JsonSerializer.Deserialize<CafeData>(json);
             }
-            catch (Exception) {}
+            catch (Exception) { }
         }
 
         private void SeedSampleProducts()
         {
-            if (db.Products.Count>0) return;
-
+            if (db.Products.Count > 0) return;
             db.Products.Add(new Product() { ProductName = "Cola", UnitPrice = 14.50m });
             db.Products.Add(new Product() { ProductName = "Tea", UnitPrice = 9m });
         }
@@ -50,17 +47,12 @@ namespace CafeBoston.UI
             {
                 var lvi = new ListViewItem($"Table {i}");
                 lvi.Tag = i;
-                lvi.ImageKey =db.ActiveOrders.Any(x=>x.TableNo==i)?"full": "empty";
+                lvi.ImageKey = db.ActiveOrders.Any(x => x.TableNo == i) ? "full" : "empty";
                 lvwTables.Items.Add(lvi);
             }
         }
 
-        private TableMoveHandler GetFrmOrder_TableMoving()
-        {
-            return FrmOrder_TableMoving;
-        }
-
-        private void lvwTables_DoubleClick(object sender, EventArgs e, TableMoveHandler frmOrder_TableMoving)
+        private void lvwTables_DoubleClick(object sender, EventArgs e)
         {
             var selectedLvi = lvwTables.SelectedItems[0];
             int tableNo = (int)selectedLvi.Tag;
@@ -83,21 +75,24 @@ namespace CafeBoston.UI
                 selectedLvi.ImageKey = "empty";
             }
         }
+
         private void FrmOrder_TableMoving(int oldTableNo, int newTableNo)
         {
             foreach (ListViewItem lvi in lvwTables.Items)
             {
-                int tableNo=(int)lvi.Tag;
-                if (tableNo==oldTableNo)
+                int tableNo = (int)lvi.Tag;
+
+                if (tableNo == oldTableNo)
                 {
                     lvi.ImageKey = "empty";
                 }
-                else if (tableNo==newTableNo)
+                else if (tableNo == newTableNo)
                 {
                     lvi.ImageKey = "full";
                 }
-            }    
+            }
         }
+
         private void tsmiOrderHistory_Click(object sender, EventArgs e)
         {
             new OrderHistoryForm(db).ShowDialog();
@@ -110,7 +105,7 @@ namespace CafeBoston.UI
 
         private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
         {
-            string json=JsonSerializer.Serialize(db);
+            string json = JsonSerializer.Serialize(db);
             File.WriteAllText("data.json", json);
         }
     }
